@@ -11,5 +11,6 @@ steps:
       echo "***********************"
       cd environments/$BRANCH_NAME
       ls
+      echo "*************** DONE ******************"
 
 # [END tf-apply]      
