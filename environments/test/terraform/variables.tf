@@ -1,6 +1,6 @@
 
 variable "project_id" {
-    default = "project1-prod-346217"
+    default = "project1-test-346303"
 }
 
 variable "region" {
