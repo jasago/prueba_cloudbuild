@@ -9,6 +9,7 @@ steps:
       echo "***********************"
       echo "$BRANCH_NAME"
       echo "***********************"
-
+      cd environments/$BRANCH_NAME
+      ls
 
 # [END tf-apply]      
