@@ -19,8 +19,8 @@ steps:
   - |
       cd environments/$BRANCH_NAME/terraform
       ls
-      terraform init -reconfigure
-      echo "**********INIT DONE***********"
+      terraform init
+      echo "**********INIT DONE ***********"
 
 # # [START tf-plan]
 # - id: 'tf plan'
