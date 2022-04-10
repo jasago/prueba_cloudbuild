@@ -29,7 +29,7 @@ steps:
   args: 
   - '-c'
   - | 
-      cd environments/$BRANCH_NAME
+      cd environments/$BRANCH_NAME/terraform
       terraform plan 
 # [END tf-plan]
 
@@ -40,7 +40,7 @@ steps:
 #   args: 
 #   - '-c'
 #   - | 
-#       cd environments/$BRANCH_NAME      
+#       cd environments/$BRANCH_NAME/terraform      
 #       terraform apply
 # # [END tf-apply] 
 
