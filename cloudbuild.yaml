@@ -19,36 +19,37 @@ steps:
   - |
       cd environments/$BRANCH_NAME
       terraform init
+      echo "**********INIT DONE***********"
 
-# [START tf-plan]
-- id: 'tf plan'
-  name: 'hashicorp/terraform:1.0.0'
-  entrypoint: 'sh'
-  args: 
-  - '-c'
-  - | 
-      cd environments/$BRANCH_NAME
-      terraform plan 
-# [END tf-plan]
+# # [START tf-plan]
+# - id: 'tf plan'
+#   name: 'hashicorp/terraform:1.0.0'
+#   entrypoint: 'sh'
+#   args: 
+#   - '-c'
+#   - | 
+#       cd environments/$BRANCH_NAME
+#       terraform plan 
+# # [END tf-plan]
 
-# [START tf-apply]
-- id: 'tf apply'
-  name: 'hashicorp/terraform:1.0.0'
-  entrypoint: 'sh'
-  args: 
-  - '-c'
-  - | 
-      cd environments/$BRANCH_NAME      
-      terraform apply
-# [END tf-apply] 
+# # [START tf-apply]
+# - id: 'tf apply'
+#   name: 'hashicorp/terraform:1.0.0'
+#   entrypoint: 'sh'
+#   args: 
+#   - '-c'
+#   - | 
+#       cd environments/$BRANCH_NAME      
+#       terraform apply
+# # [END tf-apply] 
 
-# [START tf-destroy]
-- id: 'tf destroy'
-  name: 'hashicorp/terraform:1.0.0'
-  entrypoint: 'sh'
-  args: 
-  - '-c'
-  - | 
-      cd environments/$BRANCH_NAME      
-      terraform destroy
+# # [START tf-destroy]
+# - id: 'tf destroy'
+#   name: 'hashicorp/terraform:1.0.0'
+#   entrypoint: 'sh'
+#   args: 
+#   - '-c'
+#   - | 
+#       cd environments/$BRANCH_NAME      
+#       terraform destroy
 # [END tf-destroy]      
