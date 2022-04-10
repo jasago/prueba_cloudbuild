@@ -18,6 +18,7 @@ steps:
   - '-c'
   - |
       cd environments/$BRANCH_NAME
+      ls
       terraform init
       echo "**********INIT DONE***********"
 
