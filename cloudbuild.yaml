@@ -54,4 +54,5 @@ steps:
   - | 
       cd environments/$BRANCH_NAME/terraform      
       terraform destroy
+      echo "**********Finish destroy***********"  
 # [END tf-destroy]      
