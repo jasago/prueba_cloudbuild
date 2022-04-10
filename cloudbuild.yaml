@@ -19,19 +19,19 @@ steps:
   - |
       cd environments/$BRANCH_NAME/terraform
       ls
-      terraform init
-      echo "**********INIT DONE ***********"
+      terraform init -reconfigure
+      echo "**********INIT DONE***********"
 
-# # [START tf-plan]
-# - id: 'tf plan'
-#   name: 'hashicorp/terraform:1.0.0'
-#   entrypoint: 'sh'
-#   args: 
-#   - '-c'
-#   - | 
-#       cd environments/$BRANCH_NAME
-#       terraform plan 
-# # [END tf-plan]
+# [START tf-plan]
+- id: 'tf plan'
+  name: 'hashicorp/terraform:1.0.0'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - | 
+      cd environments/$BRANCH_NAME
+      terraform plan 
+# [END tf-plan]
 
 # # [START tf-apply]
 # - id: 'tf apply'

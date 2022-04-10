@@ -1,5 +1,5 @@
 terraform {
   backend "gcs" {
-    bucket = "prueba1-345422-tfstate"
+    bucket = "project1-prod-346217-tfstate"
   }
 }
