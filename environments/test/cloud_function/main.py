@@ -2,7 +2,7 @@ from __future__ import print_function
 from google.cloud import vision
 
 def main(event , context):
-    print("Event context 5", context)
+    print("Event context 6", context)
     uri_base = 'gs://cloud-vision-codelab'
     pics = ('face_surprise.jpg', 'face_no_surprise.png')
 
