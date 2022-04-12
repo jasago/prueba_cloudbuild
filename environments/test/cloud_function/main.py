@@ -1,5 +1,5 @@
-from __future__ import print_function
-from google.cloud import vision
+#from __future__ import print_function
+#from google.cloud import vision
 
 def main(event , context):
     print("Event context 3", context)
