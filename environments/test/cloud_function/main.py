@@ -2,8 +2,9 @@ from __future__ import print_function
 from google.cloud import vision
 
 def emo_detect():
-    uri_base = 'gs://cloud-vision-codelab'
-    pics = ('face_surprise.jpg', 'face_no_surprise.png')
+    uri_base = 'gs://project1-test-346303-input'
+    
+    pics = ('image_to_analyze.jpg')
 
 
 
