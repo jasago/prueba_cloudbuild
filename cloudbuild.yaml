@@ -41,7 +41,7 @@ steps:
   - '-c'
   - | 
       cd environments/$BRANCH_NAME/terraform
-      echo "**********ASK for approval!!!***********"      
+      echo "**********ASK for approval 2!!!***********"      
       terraform apply 
 # [END tf-apply] 
 
