@@ -1,6 +1,10 @@
 from __future__ import print_function
 from google.cloud import vision
 
+def format(likelihood):
+
+    return str(likelihood)
+
 def emo_detect():
     
     uri_base = 'gs://project1-test-346303-input'
@@ -16,7 +20,7 @@ def emo_detect():
     faces = response.face_annotations
         
     for face in faces:
-        print("Anger: ", face.anger_likelihood, " Joy: ",face.joy_likelihood, " Surprice: ",
+        print("Anger: ", format(face.anger_likelihood), " Joy: ",face.joy_likelihood, " Surprice: ",
          face.surprise_likelihood, " Sorrow: ", face.sorrow_likelihood)
     
 def main(event , context):
