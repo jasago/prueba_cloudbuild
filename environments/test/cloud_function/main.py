@@ -6,10 +6,6 @@ def emo_detect():
     uri_base = 'gs://project1-test-346303-input'
     pic = ('image_to_analyze.jpg')
     
-    #uri_base = 'gs://cloud-vision-codelab'
-    #pic = 'face_surprise.jpg'
-
-
     client = vision.ImageAnnotatorClient()
     image = vision.Image()
 
@@ -20,10 +16,9 @@ def emo_detect():
     faces = response.face_annotations
         
     for face in faces:
-        print("rostro 1")
-        print(face.anger_likelihood, "    ", face.joy_likelihood, "   ", face.surprise_likelihood, "     ", face.sorrow_likelihood)
-        print("fin rostro 1")
+        print(face.anger_likelihood, " ",face.joy_likelihood, " ",
+         face.surprise_likelihood, " ", face.sorrow_likelihood)
     
 def main(event , context):
-    print("Ira       Alegria      Sorpresa     Pena")
+    #print("Ira       Alegria      Sorpresa     Pena")
     emo_detect()
