@@ -17,12 +17,13 @@ def emo_detect():
     image.source.image_uri = '%s/%s' % (uri_base, pic)
     response = client.face_detection(image=image)
 
+    faces = response.face_annotations
         
-    for face in response.face_annotations:
-        print("entro 2")
+    for face in faces:
+        print("rostro 1")
         print(face.anger_likelihood, "    ", face.joy_likelihood, "   ", face.surprise_likelihood, "     ", face.sorrow_likelihood)
-        print("paso")
+        print("fin rostro 1")
     
 def main(event , context):
-    print("image num       anger       joy      surprice     sorrow")
+    print("Ira       Alegria      Sorpresa     Pena")
     emo_detect()
