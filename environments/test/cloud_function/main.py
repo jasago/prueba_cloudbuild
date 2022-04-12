@@ -1,2 +1,2 @@
 def main(event , context):
-    print("Event contex", context)
+    print("Event context 2", context)
