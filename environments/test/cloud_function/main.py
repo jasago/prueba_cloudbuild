@@ -1,4 +1,4 @@
-#from __future__ import print_function
+from __future__ import print_function
 from google.cloud import vision
 
 def main(event , context):
