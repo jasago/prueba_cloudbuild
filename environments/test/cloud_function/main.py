@@ -16,7 +16,7 @@ def emo_detect():
     faces = response.face_annotations
         
     for face in faces:
-        print(face.anger_likelihood, " ",face.joy_likelihood, " ",
+        print("Anger: "+face.anger_likelihood, " ",face.joy_likelihood, " ",
          face.surprise_likelihood, " ", face.sorrow_likelihood)
     
 def main(event , context):
