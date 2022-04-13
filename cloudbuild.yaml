@@ -9,7 +9,7 @@ steps:
       cd environments/$BRANCH_NAME/cloud_function
       pip install -r requirements.txt
       pip install pylint      
-      pylint main.py
+      pylint --errors-only main.py
 
 - id: 'unittest'
   name: 'python:3.8-slim'
