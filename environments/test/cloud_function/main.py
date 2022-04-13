@@ -16,8 +16,8 @@ def emo_detect(uri_base, pic):
 
 def main(event , context):
     uri_base = 'gs://project1-test-346303-input' #Bucket donde esta la imagen
-    pic = ('image_to_analyze.jpg') #Imagen a analizar
+    pic = 'image_to_analyze.jpg' #Imagen a analizar
 
     emo_detect(uri_base, pic) #Detectar las emociones
 
-    print(event, context)
+    print(context.bucket, context.name)
