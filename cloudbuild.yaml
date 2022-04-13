@@ -6,10 +6,11 @@ steps:
   args:
   - '-c'
   - | 
-      pip install pylint
       cd environments/$BRANCH_NAME/cloud_function
+      pip install -r requirements.txt
+      pip install pylint      
       pylint main.py
-       
+
 - id: 'unittest'
   name: 'python:3.8-slim'
   entrypoint: '/bin/sh'  
