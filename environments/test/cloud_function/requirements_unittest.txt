@@ -1,0 +1,2 @@
+google-cloud-vision
+pytest==7.1.1
