@@ -19,3 +19,5 @@ def main(event , context):
     pic = ('image_to_analyze.jpg') #Imagen a analizar
 
     emo_detect(uri_base, pic) #Detectar las emociones
+
+    print(event, context)
