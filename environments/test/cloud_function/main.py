@@ -20,4 +20,4 @@ def main(event , context):
 
     emo_detect(uri_base, pic) #Detectar las emociones
 
-    print(context.bucket, context.name)
+    print(context[0])
