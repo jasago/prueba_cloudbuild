@@ -1,30 +1,15 @@
 
 steps:
-# - id: 'unittest'
-#   name: 'python:3.8-slim'
-#   entrypoint: '/bin/sh'  
-#   args:
-#   - '-c'
-#   - | 
-#       cd environments/$BRANCH_NAME/cloud_function
-#       pip install -r requirements.txt
-#       pip install pytest
-#       pytest
-#       echo "**********INIT DONE***********"
-
-- id: 'venv'
-  name: 'alpine'
-  entrypoint: 'sh'  
-  args: 
+- id: 'unittest'
+  name: 'python:3.8-slim'
+  entrypoint: '/bin/sh'  
+  args:
   - '-c'
   - | 
-      virtualenv -p python3 my_env
-      source my_env/bin/activate
+      cd environments/$BRANCH_NAME/cloud_function
+      pip install -r requirements.txt
       pip install pytest
-      ls
-      echo "***********************"
-      echo "$BRANCH_NAME"
-      echo "***********************"     
+      pytest 
 
 - id: 'tf init'
   name: 'hashicorp/terraform:1.0.0'
