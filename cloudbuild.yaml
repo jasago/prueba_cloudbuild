@@ -5,11 +5,11 @@ steps:
   entrypoint: '/bin/sh'  
   args:
   - '-c'
-  - |
-      cd 
-      pip install -r environments/$BRANCH_NAME/cloud_function/requirements.txt
+  - | 
+      cd environments/$BRANCH_NAME/cloud_function
+      pip install -r requirements.txt
       pip install pytest
-      pytest environments/$BRANCH_NAME/cloud_function/
+      pytest
       echo "**********INIT DONE***********"
       
 
