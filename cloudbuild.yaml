@@ -9,7 +9,7 @@ steps:
       cd environments/$BRANCH_NAME/cloud_function
       pip install -r requirements.txt
       pip install pylint      
-      pylint --errors-only disable=no-member main.py
+      pylint --errors-only --ignore-modules=google.cloud.vision_v1  main.py
 
 - id: 'unittest'
   name: 'python:3.8-slim'
