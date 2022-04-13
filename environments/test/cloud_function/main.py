@@ -16,7 +16,6 @@ def emo_detect(uri_base, pic):
     for face in faces:
         print("Anger: " + str(face.anger_likelihood), " Joy: "+ str(face.joy_likelihood), " Surprice: " +
          str(face.surprise_likelihood), " Sorrow: "+ str(face.sorrow_likelihood))
-    
     return True
     
 def main(event , context):
