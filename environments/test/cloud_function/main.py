@@ -13,7 +13,7 @@ def emo_detect(uri_base, pic):
          " Joy: "+ str(face.joy_likelihood), " Surprice: " +
          str(face.surprise_likelihood), " Sorrow: "+ str(face.sorrow_likelihood))
     return True
-  
+
 def main(event , context):
     uri_base = 'gs://project1-test-346303-input' #Bucket donde esta la imagen
     pic = ('image_to_analyze.jpg') #Imagen a analizar
