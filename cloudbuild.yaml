@@ -3,9 +3,13 @@ steps:
 - id: 'unittest'
   name: 'python:3.8-slim'
   entrypoint: '/bin/sh'  
-  args: 
+  args:
   - '-c'
-  - "pip install -r requiments.txt && pip install pytest"
+  - |
+      cd 
+      pip install -r environments/$BRANCH_NAME/cloud_function/requiments.txt
+      pip install pytest
+      echo "**********INIT DONE***********"
       
 
 - id: 'tf init'
