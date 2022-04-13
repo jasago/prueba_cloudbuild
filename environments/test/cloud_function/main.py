@@ -4,7 +4,7 @@ from google.cloud import vision
 def emo_detect(uri_base, pic):
     client = vision.ImageAnnotatorClient()
     image = vision.Image()
-    image.source.image_uri = '%s/%s' % (uri_base, pic)
+    image.source.image_uri = 'gs://%s/%s' % (uri_base, pic)
     response = client.face_detection(image=image)# pylint: disable=no-member
     faces = response.face_annotations
 
