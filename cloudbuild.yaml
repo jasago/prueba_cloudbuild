@@ -1,5 +1,15 @@
 
 steps:
+- id: 'lint'
+  name: 'python:3.8-slim'
+  entrypoint: '/bin/sh'  
+  args:
+  - '-c'
+  - | 
+      pip install pylint
+      cd environments/$BRANCH_NAME/cloud_function
+      pylint main.py
+       
 - id: 'unittest'
   name: 'python:3.8-slim'
   entrypoint: '/bin/sh'  
