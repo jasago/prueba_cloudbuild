@@ -7,8 +7,9 @@ steps:
   - '-c'
   - |
       cd 
-      pip install -r environments/$BRANCH_NAME/cloud_function/requiments.txt
+      pip install -r environments/$BRANCH_NAME/cloud_function/requirements.txt
       pip install pytest
+      pytest environments/$BRANCH_NAME/cloud_function/
       echo "**********INIT DONE***********"
       
 
