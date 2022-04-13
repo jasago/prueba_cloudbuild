@@ -1,6 +1,5 @@
 from __future__ import print_function
 from google.cloud import vision
-from sympy import true
 
 
 def emo_detect(uri_base, pic):
@@ -16,7 +15,7 @@ def emo_detect(uri_base, pic):
     for face in faces:
         print("Anger: " + str(face.anger_likelihood), " Joy: "+ str(face.joy_likelihood), " Surprice: " +
          str(face.surprise_likelihood), " Sorrow: "+ str(face.sorrow_likelihood))
-    return True
+    
     
 def main(event , context):
     uri_base = 'gs://project1-test-346303-input' #Bucket donde esta la imagen
