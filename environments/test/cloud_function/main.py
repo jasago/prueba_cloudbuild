@@ -7,4 +7,4 @@ def main(event , context):
 
     result = emotion_detection.emo_detect(uri_base, pic) #Detectar emocion
     
-    print("Emocion detectada: "+result[0]+" Probabilidad: "+result[1])
+    print("Emocion detectada: "+result[0]+", Probabilidad: "+result[1])

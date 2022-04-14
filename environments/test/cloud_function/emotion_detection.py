@@ -2,6 +2,7 @@ from __future__ import print_function
 from google.cloud import vision
 
 def get_most_likely(emo, likelihood, most_likely_emotion):
+    likelihood = likelihood.replace('Likelihood.', '')
     if( likelihood == "VERY_LIKELY"):
         return (emo,likelihood)
     elif (likelihood == "LIKELY" and most_likely_emotion[1] != "VERY_LIKELY" ):
