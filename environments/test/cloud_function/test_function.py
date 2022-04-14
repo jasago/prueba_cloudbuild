@@ -7,8 +7,9 @@ def test_emo_detect():
     test_pic = 'face_surprise.jpg'
 
     result = emotion_detection.emo_detect(test_uri_base, test_pic)
-
-    # assert result[0] == "LIKELY"
-    # assert result[1] == "Surprice"
+    
+    
+    assert result[0] == "LIKELY"
+    assert result[1] == "Surprice"
 
 

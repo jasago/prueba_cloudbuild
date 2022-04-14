@@ -18,7 +18,7 @@ def get_emotion(face):
     most_likely_emotion =  get_most_likely("Anger", str(face.anger_likelihood), most_likely_emotion)
     most_likely_emotion =  get_most_likely("Joy", str(face.joy_likelihood), most_likely_emotion)
     most_likely_emotion =  get_most_likely("Surprice", str(face.surprise_likelihood), most_likely_emotion)
-    print(str(face.surprise_likelihood))
+    
     return most_likely_emotion
 
 def emo_detect(uri_base, pic):
