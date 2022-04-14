@@ -8,6 +8,6 @@ def test_emo_detect():
 
     result = emotion_detection.emo_detect(test_uri_base, test_pic)
 
-    assert result is True
+    assert result == "LIKELY"
 
 

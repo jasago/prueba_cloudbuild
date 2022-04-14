@@ -1,11 +1,24 @@
 from __future__ import print_function
 from google.cloud import vision
 
-def get_most_likely(face):
-    anger = str(face.anger_likelihood)
-    joy = str(face.joy_likelihood)
-    suprice = str(face.surprise_likelihood)
-    return True
+def get_most_likely(emo, likelihood, most_likely_emotion):
+    if( likelihood == "VERY_LIKELY"):
+        return (emo,likelihood)
+    elif (likelihood == "LIKELY" and most_likely_emotion[1] != "VERY_LIKELY" ):
+        return (emo,likelihood)
+    elif  (likelihood == "POSSIBLE" and most_likely_emotion[1] == "-" ):
+        return (emo,likelihood)
+    else:
+        return most_likely_emotion
+
+def get_emotion(face):
+
+    most_likely_emotion = ("Ninguna","-")        
+    most_likely_emotion =  get_most_likely("Anger", str(face.anger_likelihood), most_likely_emotion)
+    most_likely_emotion =  get_most_likely("Joy", str(face.joy_likelihood), most_likely_emotion)
+    most_likely_emotion =  get_most_likely("Surprice", str(face.surprise_likelihood), most_likely_emotion)
+    
+    return most_likely_emotion
 
 def emo_detect(uri_base, pic):
 
@@ -16,9 +29,4 @@ def emo_detect(uri_base, pic):
     response = client.face_detection(image=image)# pylint: disable=no-member
     face = response.face_annotations[0]
 
-    return get_most_likely(face)
-
-    # for face in faces:
-    #     print("Anger: " + str(face.anger_likelihood),
-    #      " Joy: "+ str(face.joy_likelihood), " Surprice: " +
-    #      str(face.surprise_likelihood), " Sorrow: "+ str(face.sorrow_likelihood))
+    return get_emotion(face)
