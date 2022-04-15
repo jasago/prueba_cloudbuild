@@ -57,13 +57,13 @@ steps:
 # [END tf-apply] 
 
 # [START tf-destroy]
-# - id: 'tf destroy'
-#   name: 'hashicorp/terraform:1.0.0'
-#   entrypoint: 'sh'
-#   args: 
-#   - '-c'
-#   - | 
-#       cd environments/$BRANCH_NAME/terraform      
-#       terraform destroy -auto-approve
-#       echo "**********Finish destroy 2***********"  
+- id: 'tf destroy'
+  name: 'hashicorp/terraform:1.0.0'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - | 
+      cd environments/$BRANCH_NAME/terraform      
+      terraform destroy -auto-approve
+      echo "**********Finish destroy 2***********"  
 # [END tf-destroy]      
